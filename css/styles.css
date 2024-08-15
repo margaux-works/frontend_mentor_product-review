@@ -1,0 +1,194 @@
+:root {
+  --primary-color: #1c232b;
+  --primary-color-lighter: #6c7289;
+  --secondary-color: #3d8168;
+  --background-color: #f2eae2;
+  --pure-white: #fff;
+  --spacing-1600: 8rem;
+  --spacing-600: 3rem;
+  --spacing-500: 2.5rem;
+  --spacing-450: 1.75rem;
+  --spacing-400: 2rem;
+  --spacing-300: 1.5rem;
+  --spacing-200: 1rem;
+  --spacing-150: 0.75rem;
+  --spacing-100: 0.5rem;
+  --spacing-50: 0.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font: 0.875rem 'Montserrat', sans-serif;
+  color: var(--primary-color-lighter);
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-450) var(--spacing-200);
+  flex-direction: column;
+}
+
+.card {
+  width: 343px;
+  height: 611px;
+  border-radius: 10px;
+  background-color: var(--pure-white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--spacing-200);
+}
+
+img {
+  width: 100%;
+  flex-shrink: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-text {
+  padding: var(--spacing-300);
+}
+
+.tag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 5px;
+  padding-bottom: 0.8rem;
+}
+
+h1 {
+  font: 2rem 'Fraunces', sans-serif;
+  font-weight: 700;
+  line-height: 2rem;
+  color: var(--primary-color);
+  padding-bottom: 1rem;
+}
+
+.description {
+  padding-bottom: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-200);
+}
+
+.reduced-price {
+  font: 2rem 'Fraunces', sans-serif;
+  font-weight: 700;
+  line-height: 2rem;
+  color: var(--secondary-color);
+}
+
+.original-price {
+  text-decoration-line: line-through;
+  font-size: 0.8rem;
+  vertical-align: middle;
+}
+
+.card-button {
+  text-align: center;
+  background-color: var(--secondary-color);
+  color: var(--pure-white);
+  width: 100%;
+  padding: 1rem 5.75rem;
+  border-radius: 8px;
+  border: none;
+  margin-top: 1.2rem;
+  cursor: pointer;
+}
+
+.icon {
+  vertical-align: middle;
+  font-size: 1rem;
+}
+
+.button-text {
+  vertical-align: middle;
+  margin-left: 0.3rem;
+  font-weight: 700;
+}
+
+.attribution {
+  text-align: center;
+  padding: var(--spacing-100); /* Adjust the padding as needed */
+  width: 100%;
+  font-size: 0.75rem;
+  color: var(--primary-color-lighter);
+}
+
+.frontendmentor-profile {
+  color: var(--primary-color);
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: var(--spacing-1600) var(--spacing-300);
+  }
+
+  .card {
+    width: 600px;
+    height: 450px;
+    flex-direction: row;
+  }
+
+  .card img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0%;
+  }
+
+  .card-text {
+    padding: var(--spacing-400);
+    flex: 1;
+  }
+  .card img {
+    content: url(/img/image-product-desktop.jpg);
+  }
+  .tag {
+    font-size: 0.85rem;
+    padding-bottom: 1rem;
+  }
+
+  .description {
+    padding-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .price {
+    gap: var(--spacing-200); /* Increase gap between prices on larger screens */
+  }
+
+  .card-button {
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--pure-white);
+    width: 100%; /* Ensure the button takes full width */
+    padding: 1rem 2rem; /* Adjust padding if necessary */
+    border-radius: 8px;
+    border: none;
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+
+  .button-text {
+    margin-left: 0.3rem;
+    white-space: nowrap; /* Ensure the button text doesn’t wrap */
+  }
+}
